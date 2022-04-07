@@ -15,6 +15,7 @@
   --textClrDark: #1a1b2f;
   --ctaClr: #e33e5a;
   --light: #ffffff;
+  --backgroundLight: rgba(31, 64, 104, 0.05);
 }
 
 #header {
@@ -44,13 +45,109 @@
   font-size: 2rem;
   font-family: var(--ffsec);
 }
+/*============================ Home Page ==========*/
 
+#home-page {
+  background-color: var(--backgroundLight);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 5rem;
+}
+.home-intro-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#home-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.search-container {
+  border-bottom: 2px solid var(--secClr);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-bar {
+  width: 30%;
+  padding: 0.8rem;
+  border: 3px solid var(--secClr);
+  border-radius: 15px;
+  background-color: rgba(31, 64, 104, 0.7);
+  color: var(--light);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.search-bar::placeholder {
+  color: inherit;
+}
+.filter-container {
+}
+.filter-list {
+  display: flex;
+}
+.filter-item {
+  list-style: none;
+  color: var(--prmClr);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.5rem 3rem;
+  cursor: pointer;
+}
+
+/* ------------ Grid -------------------*/
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 350px);
+  gap: 2rem;
+}
+
+.country-card {
+  text-align: center;
+  width: 350px;
+  height: 320px;
+  margin: 8% auto;
+  border-radius: 1%;
+  transition: 0.3s;
+  box-shadow: 2px 3px 20px rgb(0, 0, 0, 35%);
+}
+
+.country-card:hover {
+  box-shadow: 10px 10px 20px rgb(0, 0, 0, 35%);
+}
 /* ======================== Typography==========*/
-
+.test {
+  color: black;
+}
 .nav-link {
   color: var(--light);
   font-weight: 600;
   font-size: 1.3rem;
   margin: 0 1.5rem;
   cursor: pointer;
+}
+.intro-title {
+  color: var(--textClrDark);
+  margin-bottom: 1rem;
+}
+.intro-body {
+  color: var(--textClrDark);
+}
+.cta {
+  color: var(--ctaClr);
+  font-weight: 600;
+}
+p > .cta {
+  font-size: 1.3rem;
 }
