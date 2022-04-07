@@ -4,10 +4,10 @@ import NavItem from "./NavItem";
 const NavList = () => {
   return (
     <ul className="nav-list">
-      <NavItem title="Home" />
-      <NavItem title="About the project" />
-      <NavItem title="Contact" />
-      <NavItem title="Support the API" />
+      <NavItem path="Home" title="Home" />
+      <NavItem path="AboutTheProject" title="About the project" />
+      <NavItem path="Contact" title="Contact" />
+      <NavItem path="Third-party" title="Support the API" />
     </ul>
   );
 };

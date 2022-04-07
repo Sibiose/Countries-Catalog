@@ -47,7 +47,7 @@
 
 /* ======================== Typography==========*/
 
-.nav-list-item {
+.nav-link {
   color: var(--light);
   font-weight: 600;
   font-size: 1.3rem;
