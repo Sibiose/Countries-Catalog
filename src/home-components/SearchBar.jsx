@@ -1,7 +1,7 @@
 import React from "react";
 import FilterList from "./filter-components/FilterList";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   return (
     <div className="search-container">
       <input
@@ -10,7 +10,10 @@ const SearchBar = () => {
         className="search-bar"
       />
       <div className="filter-container">
-        <FilterList />
+        <FilterList
+          countryData={props.countryData}
+          setCountryData={props.setCountryData}
+        />
       </div>
     </div>
   );

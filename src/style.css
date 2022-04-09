@@ -121,10 +121,21 @@
   border-radius: 1%;
   transition: 0.3s;
   box-shadow: 2px 3px 20px rgb(0, 0, 0, 35%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .country-card:hover {
   box-shadow: 10px 10px 20px rgb(0, 0, 0, 35%);
+}
+.country-title {
+  margin-bottom: 1rem;
+}
+.country-flag {
+  width: 300px;
+  height: 200px;
 }
 /* ======================== Typography==========*/
 .test {
