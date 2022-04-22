@@ -18,9 +18,6 @@
   --backgroundLight: rgba(31, 64, 104, 0.05);
 }
 
-#header {
-}
-
 #nav {
   padding: 1.5rem 5rem;
   display: flex;
@@ -29,8 +26,6 @@
   background-color: var(--secClr);
 }
 
-.nav-list {
-}
 .nav-list-item {
   display: inline-block;
 }
@@ -77,7 +72,8 @@
   align-items: center;
 }
 .search-bar {
-  width: 30%;
+  max-width: 35rem;
+  width: 90%;
   padding: 0.8rem;
   border: 3px solid var(--secClr);
   border-radius: 15px;
@@ -90,16 +86,22 @@
   color: inherit;
 }
 .filter-container {
+  width: 100%;
 }
 .filter-list {
   display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 .filter-item {
   list-style: none;
   color: var(--prmClr);
   font-size: 1rem;
   font-weight: 600;
-  margin: 1.5rem 3rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
@@ -125,8 +127,39 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
+.full-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.rotateCard {
+  transform: rotateY(180deg);
+}
+
+.front-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.back-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  padding: 0 2rem;
+}
+
+.country-info-subtitle {
+  word-wrap: break-word;
+}
 .country-card:hover {
   box-shadow: 10px 10px 20px rgb(0, 0, 0, 35%);
 }
@@ -161,4 +194,13 @@
 }
 p > .cta {
   font-size: 1.3rem;
+}
+
+.hide {
+  display: none;
+}
+@media (max-width: 800px) {
+  #home-page {
+    padding: 3rem 2rem;
+  }
 }

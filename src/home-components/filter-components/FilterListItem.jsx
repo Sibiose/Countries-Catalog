@@ -1,8 +1,14 @@
 import React from "react";
-import { useEffect } from "react";
+import { useContext } from "react";
 import axios from "axios";
+import DataContext from "../../context/DataContext";
 
 const FilterListItem = (props) => {
+  const { setCountryData } = useContext(DataContext);
+
+  /**
+   * A function that returns api data based on country region, filtering the results
+   */
   const handleFilter = async () => {
     await axios
       .get(
@@ -11,7 +17,7 @@ const FilterListItem = (props) => {
         }${props.title.toLowerCase()}`
       )
       .then((res) => {
-        props.setCountryData(res.data);
+        setCountryData(res.data);
       })
       .catch((err) => {
         console.log(err);

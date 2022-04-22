@@ -1,19 +1,13 @@
 import React from "react";
 import FilterList from "./filter-components/FilterList";
+import SearchInput from "./SearchInput";
 
-const SearchBar = (props) => {
+const SearchBar = () => {
   return (
     <div className="search-container">
-      <input
-        placeholder="Write the name of the country here..."
-        type="text"
-        className="search-bar"
-      />
+      <SearchInput />
       <div className="filter-container">
-        <FilterList
-          countryData={props.countryData}
-          setCountryData={props.setCountryData}
-        />
+        <FilterList />
       </div>
     </div>
   );
