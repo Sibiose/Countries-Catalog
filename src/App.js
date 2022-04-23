@@ -10,11 +10,11 @@ function App() {
   return (
     <div className="App">
       <DataProvider>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Header />
           {/*A router in order to switch between page components */}
           <Routes>
-            <Route exact path="/Countries-Catalog/" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
             <Route path="/AboutTheProject" element={<AboutTheProject />} />
           </Routes>
