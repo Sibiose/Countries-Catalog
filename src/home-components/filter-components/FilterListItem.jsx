@@ -25,7 +25,14 @@ const FilterListItem = (props) => {
   };
 
   return (
-    <li onClick={handleFilter} className="filter-item">
+    <li
+      onClick={() => {
+        handleFilter();
+      }}
+      className={
+        props.title !== "All" ? "filter-item" : "filter-item focusedFilter"
+      }
+    >
       {props.title}
     </li>
   );

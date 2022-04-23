@@ -1,16 +1,15 @@
 import React from "react";
-import { useContext } from "react";
-import DataContext from "../context/DataContext";
+import { useState } from "react";
 
 const CountryCard = (props) => {
-  const { isFlipped, setisFlipped } = useContext(DataContext);
+  const [isFlipped, setisFlipped] = useState("full-card");
 
   //Parsing API data in order to render it on the Country Card
   let borders = [];
   borders.push(props.borders);
-  let borderStr = borders[0] != undefined ? borders[0].join(", ") : borders[0];
+  let borderStr = borders[0] !== undefined ? borders[0].join(", ") : borders[0];
   let languagesStr =
-    props.languages != undefined
+    props.languages !== undefined
       ? Object.values(props.languages).join(", ")
       : props.languages;
 

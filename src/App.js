@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./header-components/Header";
 import Home from "./Home";
 import AboutTheProject from "./AboutTheProject";
-import Contact from "./Contact";
 import { DataProvider } from "./context/DataContext";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
             <Route path="/AboutTheProject" element={<AboutTheProject />} />
-            <Route path="/Contact" element={<Contact />} />
           </Routes>
+          <Footer />
         </Router>
       </DataProvider>
     </div>

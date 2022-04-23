@@ -7,7 +7,7 @@ export const DataProvider = ({ children }) => {
   //Declaring Context useState Variables
   const [inputValue, setinputValue] = useState("");
   const [countryData, setCountryData] = useState([]);
-  const [isFlipped, setisFlipped] = useState("full-card");
+  const [isClosed, setisClosed] = useState(true);
 
   //Declaring Context functions
 
@@ -33,8 +33,8 @@ export const DataProvider = ({ children }) => {
         setinputValue,
         countryData,
         setCountryData,
-        isFlipped,
-        setisFlipped,
+        isClosed,
+        setisClosed,
       }}
     >
       {children}

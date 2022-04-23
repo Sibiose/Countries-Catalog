@@ -6,8 +6,16 @@ const NavList = () => {
     <ul className="nav-list">
       <NavItem path="/Home" title="Home" />
       <NavItem path="/AboutTheProject" title="About the project" />
-      <NavItem path="/Contact" title="Contact" />
-      <NavItem path="/Third-party" title="Support the API" />
+      <li className="nav-list-item">
+        <a
+          target="_blank"
+          className="nav-link"
+          href="https://restcountries.com/"
+        >
+          Support the API
+        </a>
+      </li>
+      {/* <NavItem path="/" title="Support the API" /> */}
     </ul>
   );
 };
