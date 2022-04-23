@@ -14,7 +14,7 @@ function App() {
           <Header />
           {/*A router in order to switch between page components */}
           <Routes>
-            <Route exact path="/Countries-Catalog" element={<Home />} />
+            <Route exact path="/Countries-Catalog/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
             <Route path="/AboutTheProject" element={<AboutTheProject />} />
           </Routes>
