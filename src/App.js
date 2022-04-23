@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <DataProvider>
-        <Router basename="/Countries-Catalog">
+        <Router>
           <Header />
           {/*A router in order to switch between page components */}
           <Routes>
