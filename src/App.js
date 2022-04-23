@@ -14,7 +14,11 @@ function App() {
           <Header />
           {/*A router in order to switch between page components */}
           <Routes>
+<<<<<<< HEAD
             <Route exact path="/Countries-Catalog" element={<Home />} />
+=======
+            <Route exact path="" element={<Home />} />
+>>>>>>> 0fd68b3773b4c3039a289d809e08c9bc107f1a22
             <Route path="/Home" element={<Home />} />
             <Route path="/AboutTheProject" element={<AboutTheProject />} />
           </Routes>
